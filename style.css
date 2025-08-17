@@ -1,10 +1,9 @@
-/* --- Global Styles & Variables --- */
 :root {
-    --primary-color: #4CAF50; /* সবুজ */
-    --secondary-color: #2c3e50; /* গাঢ় নীল */
-    --background-light: #f5f7fa; /* হালকা ধূসর */
-    --text-dark: #2d3748; /* গাঢ় টেক্সট */
-    --text-light: #718096; /* হালকা টেক্সট */
+    --primary-color: #4CAF50;
+    --secondary-color: #2c3e50;
+    --background-light: #f5f7fa;
+    --text-dark: #2d3748;
+    --text-light: #718096;
     --white: #ffffff;
     --border-color: #e2e8f0;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -340,7 +339,7 @@ nav .logo img {
 
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
-    background-color: rgba(76, 175, 80, 0.7); /* Green overlay on hover */
+    background-color: rgba(76, 175, 80, 0.7);
 }
 
 .gallery-overlay p {
@@ -485,7 +484,7 @@ footer {
 /* --- Responsive Media Queries --- */
 @media (max-width: 992px) {
     .hero {
-        flex-direction: column; /* Image top, content bottom */
+        flex-direction: column;
         text-align: center;
         padding-top: 2rem;
     }
@@ -494,7 +493,7 @@ footer {
         text-align: center;
     }
     .contact {
-        flex-direction: column; /* Image top, form bottom */
+        flex-direction: column;
         gap: 4rem;
     }
     .contact-image img {
@@ -511,25 +510,25 @@ footer {
     }
     
     .nav-links {
-        display: none; /* Mobile Navigation: Hide for a simpler example */
+        display: none;
     }
 
     .client-logos ul {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 logos per line */
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
     
     .features-grid {
-        grid-template-columns: 1fr; /* 1 card per line */
+        grid-template-columns: 1fr;
     }
     
     .stats-grid {
-        grid-template-columns: 1fr; /* 1 card per line */
+        grid-template-columns: 1fr;
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr 1fr; /* 2 images per line */
+        grid-template-columns: 1fr 1fr; 
     }
 
     .footer-content {
@@ -554,7 +553,7 @@ footer {
         text-align: center;
     }
     .gallery-grid {
-        grid-template-columns: 1fr; /* 1 image per line on very small screens */
+        grid-template-columns: 1fr;
     }
     .footer-content {
         grid-template-columns: 1fr;
