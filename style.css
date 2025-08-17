@@ -1,0 +1,563 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #4CAF50; /* সবুজ */
+    --secondary-color: #2c3e50; /* গাঢ় নীল */
+    --background-light: #f5f7fa; /* হালকা ধূসর */
+    --text-dark: #2d3748; /* গাঢ় টেক্সট */
+    --text-light: #718096; /* হালকা টেক্সট */
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* --- Section 1: Navbar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+nav .logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-dark);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* --- Section 2: Banner --- */
+.hero {
+    background-color: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    min-height: 90vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+
+/* --- Section 3: Our Clients --- */
+.client-logos ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.client-logos img {
+    height: 45px;
+    width: auto;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.client-logos img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* --- Section 4: Power of Blockchain --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+}
+
+/* --- Section 5: Helping Blockchain --- */
+.stats {
+    background-color: var(--background-light);
+}
+
+.stats-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.stats-text {
+    flex: 1;
+}
+
+.stats-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.stats-text p {
+    color: var(--text-light);
+}
+
+.stats-grid {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.stat-item img {
+    height: 40px;
+}
+
+.stat-item h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.stat-item p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* --- Section 6: Blockchain Future --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    height: 350px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease, background-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    background-color: rgba(76, 175, 80, 0.7); /* Green overlay on hover */
+}
+
+.gallery-overlay p {
+    margin-bottom: 1rem;
+}
+
+.gallery-overlay a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* --- Section 7: Contact Section --- */
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--background-light);
+    padding: 4rem 2rem;
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-image img {
+    max-width: 80%;
+    border-radius: 12px;
+}
+
+.contact-form-container {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.contact-form-container form {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.contact-form-container .btn {
+    width: 100%;
+}
+
+/* --- Section 8: Footer --- */
+footer {
+    background-color: var(--secondary-color);
+    color: #a0aec0;
+    padding: 4rem 0 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.footer-section.about p {
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #a0aec0;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section ul a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #4a5568;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column; /* Image top, content bottom */
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .stats-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact {
+        flex-direction: column; /* Image top, form bottom */
+        gap: 4rem;
+    }
+    .contact-image img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none; /* Mobile Navigation: Hide for a simpler example */
+    }
+
+    .client-logos ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 logos per line */
+        gap: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr; /* 1 card per line */
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 card per line */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr; /* 2 images per line */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    .footer-section.about {
+        grid-column: 1 / -1;
+    }
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+     .client-logos ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stats-grid .stat-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 image per line on very small screens */
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
